@@ -1,67 +1,123 @@
 /* remember that you should make things variables and use the variables */
+
 :root {
     --wine: #640c0c;
     --white: #ffffff;
     --tan: #d2b48c;
+    --black: #000000;
     --apix: 20px;
   }
-  
+
+  /* Making a simple statement for font*/
+
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}  
+
+/* stating a background color so the wine will show up on the header */
 
 body {
     background-color: var(white);
 }
 
+/* header spacing and color */
+
 header {
     display:flex;
     justify-content: space-between;
     padding: var(--apix);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: #640c0c;
     color: var(--white);
 }
+
+/* attributes specific to my name in top left corner */
 
 header h1 {
     flex: 0 0 25%;
    font-size: 50px;
 }
 
+/* spacing for the "about me", "work", "contact me", and "resume" links */
+
 header li {
     display: inline;
-    padding: var(--apix);
-    font-size: 25px;
+    padding: 40px;
+    font-size: 35px;
 }
+
+/* adding specificity so my links will show up the color i want them */
+
+header li a{
+    color: var(--tan);
+}
+
+/* adding the banner image and padding it out to get the spacing right */
 
 .banner {
     display: flex;
     justify-content:flex-end;
-    background-color: tan;
-    padding-top: var(--apix);
-    color: var(--wine);
+    background-image: url(../images/emotions.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 175px;
 }
+
+/* adding qualities to the bottom right of the banner image message */
 
 .banner h1 {
     padding: 10px;
     border: black 10px solid;
+    background-color: tan;
+    color: var(--wine);
 }
+
+/* stating color and spacing for the "about" cell and giving it a border */
+
 .about {
     display:flex;
     justify-content: space-between;
     padding: 20px;
-    border: black 5px solid;
+    border: var(--black) 5px solid;
     background-color: var(--wine);
     color: var(--white);
 }
+
+/* assigning specific attributes to the "about Me" on the left */
+
 .about h2 {
     font-size: 35px;
-    border-right: var(--tan) 15px solid;
+    color: var(--tan);
+    border-right: var(--black) 10px solid;
 }
+
+/* stretching the p tag to fit the space left in the cell */
 
 .about p {
     flex: 0 0 65%;
 }
 
-.card {
-    flex: 1 0 200px;
+/* copy pasta of the ".about" section above to ensure consistency */
+
+.work {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    border: black 5px solid;
+    background-color: var(--wine);
+    color: var(--white);
+}
+
+.work h2 {
+    font-size: 35px;
+    color: var(--tan);
+    border-right: var(--black) 10px solid;
+}
+
+/* creating the cards to link to future projects */
+
+.work div p {
+    flex: 1 0 33%;
     padding: 10px;
     text-align: center;
     border-style: solid;
