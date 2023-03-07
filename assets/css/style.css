@@ -99,9 +99,7 @@ header li a{
 /* copy pasta of the ".about" section above to ensure consistency */
 
 .work {
-    display:flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: flex;
     padding: 20px;
     border: black 5px solid;
     background-color: var(--wine);
@@ -116,8 +114,16 @@ header li a{
 
 /* creating the cards to link to future projects */
 
-.work div p {
-    flex: 1 0 33%;
+.work .container {
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.work .card {
+    margin: 5px;
+    flex: 1 0 25%;
     padding: 10px;
     text-align: center;
     border-style: solid;
